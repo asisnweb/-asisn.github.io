@@ -54,11 +54,24 @@
       font-size: 0.9rem;
     }
 
+    /* --- GRILLE 3 COLONNES --- */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       margin-top: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .service-category {
@@ -160,26 +173,29 @@
       color: var(--primary);
     }
 
-    @media (max-width: 600px) {
-      .services-wrapper {
-        margin-top: 24px;
-      }
+    /* --- BLOC CONTACT --- */
+    .contact {
+      margin-top: 50px;
+      padding: 20px;
+      background: #e6f2ff;
+      border-left: 4px solid var(--primary);
+      border-radius: 6px;
+    }
 
-      .services-header h1 {
-        font-size: 1.6rem;
-      }
+    .contact h2 {
+      margin-top: 0;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
 
-      .service-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .service-price {
-        margin-top: 2px;
-      }
+    .contact p {
+      margin: 6px 0;
+      font-size: 1rem;
     }
   </style>
 </head>
+
 <body>
   <section class="services-wrapper">
     <header class="services-header">
@@ -193,29 +209,24 @@
     </header>
 
     <div class="services-grid">
+
       <!-- Installation & mise en service -->
       <article class="service-category">
         <h2>Installation & mise en service</h2>
         <h3>Mise en route de votre matériel</h3>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Installation d’un PC (neuf ou reconditionné)</div>
-          </div>
+          <div class="service-name">Installation d’un PC (neuf ou reconditionné)</div>
           <div class="service-price">50&nbsp;€</div>
         </div>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Installation d’imprimante (USB / Wi‑Fi)</div>
-          </div>
+          <div class="service-name">Installation d’imprimante (USB / Wi‑Fi)</div>
           <div class="service-price">25&nbsp;€</div>
         </div>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Installation box internet / Wi‑Fi</div>
-          </div>
+          <div class="service-name">Installation box internet / Wi‑Fi</div>
           <div class="service-price">25&nbsp;€</div>
         </div>
 
@@ -242,9 +253,7 @@
         </div>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Optimisation d’un PC lent</div>
-          </div>
+          <div class="service-name">Optimisation d’un PC lent</div>
           <div class="service-price">35&nbsp;€</div>
         </div>
 
@@ -257,9 +266,7 @@
         </div>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Installation d’un antivirus / sécurité</div>
-          </div>
+          <div class="service-name">Installation d’un antivirus / sécurité</div>
           <div class="service-price">20&nbsp;€</div>
         </div>
       </article>
@@ -270,23 +277,17 @@
         <h3>Connexion stable à la maison</h3>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Résolution de problèmes Wi‑Fi / internet</div>
-          </div>
+          <div class="service-name">Résolution de problèmes Wi‑Fi / internet</div>
           <div class="service-price">25&nbsp;€</div>
         </div>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Installation de répéteur Wi‑Fi</div>
-          </div>
+          <div class="service-name">Installation de répéteur Wi‑Fi</div>
           <div class="service-price">20&nbsp;€</div>
         </div>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Configuration du réseau domestique</div>
-          </div>
+          <div class="service-name">Configuration du réseau domestique</div>
           <div class="service-price">30&nbsp;€</div>
         </div>
       </article>
@@ -313,9 +314,7 @@
         </div>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Récupération de fichiers simples</div>
-          </div>
+          <div class="service-name">Récupération de fichiers simples</div>
           <div class="service-price">20&nbsp;€</div>
         </div>
       </article>
@@ -326,16 +325,12 @@
         <h3>Prendre confiance avec le numérique</h3>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Initiation à l’ordinateur (débutants)</div>
-          </div>
+          <div class="service-name">Initiation à l’ordinateur (débutants)</div>
           <div class="service-price">30&nbsp;€ / h</div>
         </div>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Formation email, internet, bureautique…</div>
-          </div>
+          <div class="service-name">Formation email, internet, bureautique…</div>
           <div class="service-price">30&nbsp;€ / h</div>
         </div>
 
@@ -354,9 +349,7 @@
         <h3>Protéger vos données</h3>
 
         <div class="service-item">
-          <div>
-            <div class="service-name">Mise en place de sauvegarde automatique</div>
-          </div>
+          <div class="service-name">Mise en place de sauvegarde automatique</div>
           <div class="service-price">25&nbsp;€</div>
         </div>
 
@@ -376,6 +369,7 @@
           <div class="service-price">20&nbsp;€</div>
         </div>
       </article>
+
     </div>
 
     <!-- Pack principal -->
@@ -396,6 +390,15 @@
         </p>
       </article>
     </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><strong>Téléphone :</strong> 06 41 91 59 17</p>
+      <p><strong>Email :</strong> <a href="mailto:contact.asisn@gmail.com">contact.asisn@gmail.com</a></p>
+      <p><strong>Adresse :</strong> 740 Rue de la Froidure, 59310 Auchy-lez-Orchies</p>
+    </section>
+
   </section>
 </body>
 </html>
