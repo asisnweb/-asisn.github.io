@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>ASISN - Grille des prestations</title>
+  <style>
+    :root {
+      --primary: #0078d4;
+      --text: #222;
+      --bg: #f7f7f7;
+      --card-bg: #ffffff;
+      --muted: #666;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    .services-wrapper {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 16px 40px;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .services-header h1 {
+      font-size: 2rem;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .services-header p {
+      margin: 4px 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .services-note {
+      background: #e6f2ff;
+      border-left: 4px solid var(--primary);
+      padding: 10px 14px;
+      border-radius: 4px;
+      margin-top: 14px;
+      font-size: 0.9rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .service-category {
+      background: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+      padding: 18px 18px 14px;
+      border: 1px solid #e2e2e2;
+    }
+
+    .service-category h2 {
+      font-size: 1.1rem;
+      margin: 0 0 10px;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .service-category h3 {
+      font-size: 0.95rem;
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.95rem;
+    }
+
+    .service-item:last-child {
+      border-bottom: none;
+    }
+
+    .service-name {
+      font-weight: 500;
+    }
+
+    .service-note {
+      font-size: 0.83rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .service-price {
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    /* Bloc pack principal */
+    .pack-wrapper {
+      margin-top: 40px;
+    }
+
+    .pack-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 18px 18px 14px;
+      border: 1px solid var(--primary);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    }
+
+    .pack-title {
+      font-size: 1.15rem;
+      margin: 0 0 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+    }
+
+    .pack-subtitle {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .pack-list {
+      margin: 0 0 10px;
+      padding-left: 18px;
+      font-size: 0.95rem;
+    }
+
+    .pack-list li {
+      margin-bottom: 4px;
+    }
+
+    .pack-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .pack-price span {
+      color: var(--primary);
+    }
+
+    @media (max-width: 600px) {
+      .services-wrapper {
+        margin-top: 24px;
+      }
+
+      .services-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .service-price {
+        margin-top: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="services-wrapper">
+    <header class="services-header">
+      <h1>ASISN – Assistance informatique à domicile</h1>
+      <p>Prestations informatiques et services numériques à domicile</p>
+      <div class="services-note">
+        Toutes ces prestations sont réalisées à domicile et
+        ouvrent droit au <strong>crédit d'impôt de 50&nbsp;%</strong>
+        (selon l'article 199 sexdecies du CGI).
+      </div>
+    </header>
+
+    <div class="services-grid">
+      <!-- Installation & mise en service -->
+      <article class="service-category">
+        <h2>Installation & mise en service</h2>
+        <h3>Mise en route de votre matériel</h3>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Installation d’un PC (neuf ou reconditionné)</div>
+          </div>
+          <div class="service-price">50&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Installation d’imprimante (USB / Wi‑Fi)</div>
+          </div>
+          <div class="service-price">25&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Installation box internet / Wi‑Fi</div>
+          </div>
+          <div class="service-price">25&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Installation de périphériques</div>
+            <div class="service-note">Clavier, souris, webcam, haut‑parleurs…</div>
+          </div>
+          <div class="service-price">10–15&nbsp;€</div>
+        </div>
+      </article>
+
+      <!-- Configuration & optimisation -->
+      <article class="service-category">
+        <h2>Configuration & optimisation</h2>
+        <h3>PC prêt à l’emploi et fluide</h3>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Configuration complète d’un PC</div>
+            <div class="service-note">Mises à jour, comptes, logiciels essentiels…</div>
+          </div>
+          <div class="service-price">40&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Optimisation d’un PC lent</div>
+          </div>
+          <div class="service-price">35&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Nettoyage logiciel</div>
+            <div class="service-note">Suppression de programmes inutiles</div>
+          </div>
+          <div class="service-price">25&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Installation d’un antivirus / sécurité</div>
+          </div>
+          <div class="service-price">20&nbsp;€</div>
+        </div>
+      </article>
+
+      <!-- Internet & réseau -->
+      <article class="service-category">
+        <h2>Internet & réseau</h2>
+        <h3>Connexion stable à la maison</h3>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Résolution de problèmes Wi‑Fi / internet</div>
+          </div>
+          <div class="service-price">25&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Installation de répéteur Wi‑Fi</div>
+          </div>
+          <div class="service-price">20&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Configuration du réseau domestique</div>
+          </div>
+          <div class="service-price">30&nbsp;€</div>
+        </div>
+      </article>
+
+      <!-- Assistance & dépannage -->
+      <article class="service-category">
+        <h2>Assistance & dépannage</h2>
+        <h3>Pour vos pannes et blocages</h3>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Dépannage informatique à domicile</div>
+            <div class="service-note">Intervention d’environ 1 heure</div>
+          </div>
+          <div class="service-price">40&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Assistance à distance</div>
+            <div class="service-note">Session d’environ 30 minutes</div>
+          </div>
+          <div class="service-price">15&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Récupération de fichiers simples</div>
+          </div>
+          <div class="service-price">20&nbsp;€</div>
+        </div>
+      </article>
+
+      <!-- Formation & accompagnement -->
+      <article class="service-category">
+        <h2>Formation & accompagnement</h2>
+        <h3>Prendre confiance avec le numérique</h3>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Initiation à l’ordinateur (débutants)</div>
+          </div>
+          <div class="service-price">30&nbsp;€ / h</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Formation email, internet, bureautique…</div>
+          </div>
+          <div class="service-price">30&nbsp;€ / h</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Aide administrative en ligne</div>
+            <div class="service-note">CAF, Ameli, impôts, etc.</div>
+          </div>
+          <div class="service-price">25&nbsp;€</div>
+        </div>
+      </article>
+
+      <!-- Sécurité & sauvegarde -->
+      <article class="service-category">
+        <h2>Sécurité & sauvegarde</h2>
+        <h3>Protéger vos données</h3>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Mise en place de sauvegarde automatique</div>
+          </div>
+          <div class="service-price">25&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Installation d’un service cloud</div>
+            <div class="service-note">Google Drive, OneDrive, etc.</div>
+          </div>
+          <div class="service-price">20&nbsp;€</div>
+        </div>
+
+        <div class="service-item">
+          <div>
+            <div class="service-name">Sensibilisation à la sécurité</div>
+            <div class="service-note">Mots de passe, arnaques, bonnes pratiques</div>
+          </div>
+          <div class="service-price">20&nbsp;€</div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Pack principal -->
+    <section class="pack-wrapper">
+      <article class="pack-card">
+        <h2 class="pack-title">Pack PC complet ASISN</h2>
+        <p class="pack-subtitle">Ordinateur prêt à l’emploi, installé et expliqué à domicile</p>
+        <ul class="pack-list">
+          <li>PC complet assemblé et testé</li>
+          <li>Installation et configuration à domicile</li>
+          <li>Création des comptes et mise en route</li>
+          <li>Explications et prise en main personnalisée</li>
+          <li>Assistance après installation (conditions à définir)</li>
+        </ul>
+        <p class="pack-price">
+          Tarif : <span>500&nbsp;€</span><br>
+          Soit 250&nbsp;€ après crédit d’impôt (SAP)
+        </p>
+      </article>
+    </section>
+  </section>
+</body>
+</html>
